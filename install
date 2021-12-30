@@ -82,13 +82,14 @@ fi
 ###############################################################################
 
 # Create some directories
-mkdir -p "${HOME}/.kube"
+mkdir -p "${HOME}/.kube" "${HOME}/.vim/swaps" "${HOME}/.vim/backups" "${HOME}/.vim/undo"
 ln -sf  /mnt/c/Users/kgatzweiler/Nextcloud/Kubeconfig/configs -t ~/.kube/
 ln -sf /mnt/c/Users/kgatzweiler/Nextcloud/Kubeconfig/config ~/.kube/config 
 
 stow -R fish --target=${HOME}
 stow -R git --target=${HOME}
 stow -R kube --target=${HOME}
+stow -R vim --target=${HOME}
 
 ###############################################################################
 # Change default shell to zsh

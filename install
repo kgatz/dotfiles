@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+
+set -e
+
+skip_system_packages="${1}"
+
+os_type="$(uname -s)"
+
+apt_packages="curl stow git tmux fish"
+brewfile="Brewfile"
+
+###############################################################################
+# Detect OS and distro type
+###############################################################################
+
+case "${os_type}" in
+    Linux*)
+        os_type="Linux"
+
+        if [ !  -f "/etc/debian_version" ]; then
+           [ -z "${skip_system_packages}" ]
+        fi
+
+        ;;
+    Darwin*) os_type="macOS";;
+    *)
+        os_type="Other"
+
+        [ -z "${skip_system_packages}" ]
+
+        ;;
+esac
+
+###############################################################################
+# Install packages using your OS' package manager
+###############################################################################
+
+function apt_install_packages {
+    sudo apt-get update && sudo apt-get install -y ${apt_packages} ${apt_packages_optional}
+}
+
+function brew_install_self {
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/kgatzweiler/.profile
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/kgatzweiler/.bashrc
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+}
+
+function brew_install_packages {
+    if ! command -v brew &> /dev/null
+    then
+         brew_install_self
+    fi
+    brew bundle install ${Brewfile}
+}
+
+function omf_install_self {
+    curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+}
+
+function omf_install_packages {
+    if ! fish -c command -v omf &> /dev/null
+    then
+         omf_install_self
+    fi
+
+    fish -c "omf install bobthefish"
+}
+
+if [ "${os_type}" == "Linux" ]; then
+    apt_install_packages
+    brew_install_packages
+    omf_install_packages
+else
+    brew_install_packages
+    omf_install_packages
+fi
+
+
+###############################################################################
+# Stow dotfiles
+###############################################################################
+
+# Create some directories
+mkdir -p "${HOME}/.kube"
+ln -sf  /mnt/c/Users/kgatzweiler/Nextcloud/Kubeconfig/configs -t ~/.kube/
+ln -sf /mnt/c/Users/kgatzweiler/Nextcloud/Kubeconfig/config ~/.kube/config 
+
+stow -R fish --target=${HOME}
+stow -R git --target=${HOME}
+stow -R kube --target=${HOME}
+
+###############################################################################
+# Change default shell to zsh
+###############################################################################
+
+chsh -s `which fish`

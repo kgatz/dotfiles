@@ -12,5 +12,5 @@ alias tf="terraform"
 alias drun='docker run --rm -it -v $PWD:/app -w /app'
 
 ## Bobthefish
-set -g theme_powerline_fonts no
+set -g theme_powerline_fonts yes
 set -g theme_nerd_fonts no

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+. ./.profile
+
+{{ if eq .chezmoi.os "linux" }}
+{{ if eq .chezmoi.osRelease.id "debian" }}
+
+sudo apt-get update
+
+# Install all locales
+sudo apt-get install --yes \
+    locales \
+    locales-all
+
+{{ end }}
+{{ end }}

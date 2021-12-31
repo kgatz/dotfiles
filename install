@@ -89,7 +89,7 @@ ln -sf /mnt/c/Users/kgatzweiler/Nextcloud/Kubeconfig/config ~/.kube/config
 stow -R fish --target=${HOME}
 stow -R git --target=${HOME}
 stow -R kube --target=${HOME}
-stow -R vim --target=${HOME}
+stow -R nvim --target=${HOME}
 
 ###############################################################################
 # Change default shell to zsh

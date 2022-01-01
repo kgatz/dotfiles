@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM debian:latest
 
 ARG USER=kai
 ARG NAME="KaiG"
@@ -23,6 +23,7 @@ WORKDIR $HOME
 
 COPY --chown=$USER . .
 
+RUN mkdir ~/.ssh && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 RUN ./install.sh
 
 COPY install.sh personalize

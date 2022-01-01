@@ -26,7 +26,4 @@ COPY --chown=$USER . .
 RUN mkdir ~/.ssh && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 RUN ./install.sh
 
-COPY install.sh personalize
-COPY install.sh /coder/configure
-
 ENTRYPOINT [ "/home/linuxbrew/.linuxbrew/bin/fish", "--login" ]

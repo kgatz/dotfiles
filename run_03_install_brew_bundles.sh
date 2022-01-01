@@ -6,7 +6,7 @@
 brew bundle install
 
 # Configure FZF
-$(brew --prefix)/opt/fzf/install --all
+$(brew --prefix)/opt/fzf/install --all --no-zsh --no-bash > /dev/null
 
 
 # Install fish completions

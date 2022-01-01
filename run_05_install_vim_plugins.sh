@@ -3,4 +3,4 @@
 . ./.profile
 
 # Install vim plugins
-#nvim --headless +PlugInstall +qall
+nvim --headless +PlugInstall +qall

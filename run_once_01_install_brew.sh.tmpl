@@ -14,5 +14,4 @@ sudo apt-get install --yes \
 {{ end }}
 
 # Install brew
-ssh-keyscan -t rsa github.com >> ~/.ssh/known_host
 /bin/bash -c "CI=1 $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

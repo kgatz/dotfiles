@@ -1,16 +1,6 @@
-.hyperfine.js
-docker-compose.yaml
 Dockerfile
-docs
 install.sh
 README.md
-
-# Cache
-.config/zsh/.zcompdump
-.config/zsh/.zcompdump.zwc
-
-# History
-.config/zsh/.zsh_history
 
 # Ignore MacOS files
 .CFUserTextEncoding

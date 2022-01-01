@@ -1,1 +1,5 @@
+{{- if eq .chezmoi.os "darwin" }}
 ../Nextcloud/Kubeconfig/config
+{{ else if eq .chezmoi.os "linux" }}
+/mnt/c/Users/kgatzweiler/Nextcloud/Kubeconfig/config
+{{- end }}

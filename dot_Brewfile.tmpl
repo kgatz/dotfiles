@@ -1,4 +1,3 @@
-tap "danielfoehrkn/switch"
 tap "homebrew/bundle"
 tap "homebrew/core"
 brew "chezmoi"
@@ -10,14 +9,15 @@ brew "gcc"
 brew "fzf"
 brew "starship"
 brew "wget"
+brew "yq"
 brew "jq"
 
-brew "awscli"
-brew "azure-cli"
 brew "openshift-cli"
-cask "google-cloud-sdk"
 
 brew "kubernetes-cli"
+brew "kustomize"
+brew "flux"
+brew "velero"
 brew "helm"
 brew "krew"
 brew "terraform"
@@ -26,10 +26,12 @@ brew "k3sup"
 brew "k9s"
 brew "kubie"
 brew "mkcert"
-brew "yq"
 
-cask "1password-cli"
-   
 {{- if eq .chezmoi.os "darwin" }}
 cask "docker"
+cask "1password-cli"
+cask "google-cloud-sdk"
+{{ else if eq .chezmoi.os "darwin" }}
+
+brew "azure-cli"
 {{- end }}

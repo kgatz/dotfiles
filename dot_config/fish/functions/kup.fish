@@ -19,7 +19,7 @@ function __azure
       set name (echo $clusters | jq -r ".[$i] | .name")
       set rg (echo $clusters | jq -r ".[$i] | .resourceGroup")
       echo "$rg -- $name"
-          az aks get-credentials --resource-group $rg --name $name --file ~/.kube/configs/azure.yaml --context "aks_$rg-$name" --only-show-errors
+          az aks get-credentials --resource-group $rg --name $name --file ~/.kube/configs/azure.yaml --context "aks_$rg-$name" --only-show-errors --subscription $id
     end
   end
 end

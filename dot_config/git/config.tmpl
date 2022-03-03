@@ -117,8 +117,10 @@
 	email = kgatzweiler@opentext.com
 	name = Kai Gatzweiler
 
-{{ if eq .chezmoi.os "linux" }}
 [credential]
+{{ if eq .chezmoi.hostname "kgatz" }}
+
+{{ if eq .chezmoi.os "linux" }}
 	helper = "/mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
 {{- end }}
 

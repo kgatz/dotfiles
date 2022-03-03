@@ -120,7 +120,7 @@
 [credential]
 {{ if eq .chezmoi.hostname "kgatz" }}
 
-{{ if eq .chezmoi.os "linux" }}
+{{ else if eq .chezmoi.os "linux" }}
 	helper = "/mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
 {{- end }}
 

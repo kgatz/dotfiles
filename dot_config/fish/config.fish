@@ -13,5 +13,5 @@ alias k="kubectl"
 alias tf="terraform"
 
 
-alias drun='docker run --rm -it -v $PWD:/app -w /app'
+alias drun='docker run --rm -it -v $PWD:/work -w /work'
 

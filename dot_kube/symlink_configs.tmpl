@@ -1,7 +1,7 @@
 {{- if eq .chezmoi.os "darwin" }}
 ../Nextcloud/Kubeconfig/configs
 {{ else if eq .chezmoi.hostname "kgatz" }}
-~/.kube/local_configs
+/home/kgatzweiler/.kube/local_configs
 {{ else if eq .chezmoi.os "linux" }}
 /mnt/c/Users/kgatzweiler/Nextcloud/Kubeconfig/configs
 {{- end }}

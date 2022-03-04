@@ -33,7 +33,7 @@ function __gcp
       set i $i-1 
       set name (echo $clusters | jq -r ".[$i] | .name")
       set zone (echo $clusters | jq -r ".[$i] | .zone")
-      KUBECONFIG="~/.kube/configs/gcp.yaml" gcloud container clusters get-credentials $name --zone=$zone --project=$id --quiet
+      KUBECONFIG="$HOME/.kube/configs/gcp.yaml" gcloud container clusters get-credentials $name --zone=$zone --project=$id --quiet
     end 
   end
 end

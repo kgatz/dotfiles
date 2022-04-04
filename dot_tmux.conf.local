@@ -416,3 +416,6 @@ set -g @continuum-restore 'on'
 #
 # "$@"
 # # /!\ do not remove the previous line
+#
+#
+set -g default-shell /home/linuxbrew/.linuxbrew/bin/fish

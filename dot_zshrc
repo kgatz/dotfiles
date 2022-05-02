@@ -1,0 +1,15 @@
+# Created by newuser for 5.8
+source ~/.profile
+
+alias k=kubectl
+alias tf=terraform
+
+alias kcc="kubie ctx"
+alias kns="kubie ns"
+
+source <(kubectl completion zsh)
+source <(helm completion zsh)
+
+
+eval "$(starship init zsh)"
+source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh

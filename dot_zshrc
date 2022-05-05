@@ -4,15 +4,11 @@ source ~/.profile
 alias k=kubectl
 alias tf=terraform
 
-#alias kcc="kubie ctx"
-#alias kns="kubie ns"
-
-alias kcc="switch"
-alias kns="switch ns"
+alias kcc="kubie ctx"
+alias kns="kubie ns"
 
 source <(kubectl completion zsh)
 source <(helm completion zsh)
-
 
 eval "$(starship init zsh)"
 source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
@@ -22,14 +18,13 @@ export TF_CLI_ARGS_plan="-var-file custom.tfvars"
 export TF_CLI_ARGS_destroy="-var-file custom.tfvars"
 export TF_CLI_ARGS_apply="-var-file custom.tfvars"
 
-# Kubeswitch (https://github.com/danielfoehrKn/kubeswitch)
-INSTALLATION_PATH=$(brew --prefix switch) && source $INSTALLATION_PATH/switch.sh
-autoload bashcompinit
-bashcompinit
+autoload -U +X bashcompinit && bashcompinit
 
 # gCloud SDK
 export PATH="/home/kgatzweiler/google-cloud-sdk/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH"
 source /home/kgatzweiler/google-cloud-sdk/completion.zsh.inc
 
-autoload -U +X bashcompinit && bashcompinit
+# Terraform
 complete -o nospace -C /home/linuxbrew/.linuxbrew/Cellar/terraform/1.1.9/bin/terraform terraform
+
+

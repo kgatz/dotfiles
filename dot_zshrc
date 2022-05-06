@@ -1,11 +1,20 @@
 # Created by newuser for 6.8
 source ~/.profile
 
+alias ll='ls -al'
+
+alias kup=~/git/kup.sh
+
 alias k=kubectl
 alias tf=terraform
 
+
 alias kcc="kubie ctx"
 alias kns="kubie ns"
+
+
+#alias drun
+alias drun='docker run --rm -it -v $PWD:/work -w /work'
 
 source <(kubectl completion zsh)
 source <(helm completion zsh)
@@ -28,3 +37,10 @@ source /home/kgatzweiler/google-cloud-sdk/completion.zsh.inc
 complete -o nospace -C /home/linuxbrew/.linuxbrew/Cellar/terraform/1.1.9/bin/terraform terraform
 
 
+function cslogs
+{
+    local pod=$1
+    kubectl exec $pod -- tar cvfz /opt/opentext/logs.tgz /opt/opentext/cs/logs 
+    kubectl cp $pod:/opt/opentext/logs.tgz logs.tgz 
+    kubectl exec $pod -- rm /opt/opentext/logs.tgz
+}

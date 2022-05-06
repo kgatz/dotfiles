@@ -1,7 +1,32 @@
 [kubernetes]
-format = 'on [⛵ $context \($namespace\)](dimmed green) '
+format = '[☸ $context \($namespace\)]($style) '
 disabled = false
+style = "bold light-blue"
+
 [kubernetes.context_aliases]
 "dev.local.cluster.k8s" = "dev"
 ".*/openshift-cluster/.*" = "openshift"
 "gke_.*_(?P<cluster>[\\w-]+)" = "gke-$cluster"
+"aks_.*_(?P<cluster>[\\w-]+)" = "aks-$cluster"
+
+[username]
+disabled = true
+
+[directory]
+truncation_length = 8
+truncation_symbol = "…/"
+
+[hostname]
+ssh_only = true
+format = "[$hostname](bold red) "
+disabled = true
+
+[azure]
+disabled = true
+format = " on [$symbol($subscription)]($style) "
+symbol = "ﴃ "
+style = "blue bold"
+
+[gcloud]
+disabled = true
+format = 'on [$symbol$account(\($project\))]($style)'

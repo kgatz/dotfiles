@@ -19,19 +19,25 @@ alias drun='docker run --rm -it -v $PWD:/work -w /work'
 
 source <(kubectl completion zsh)
 source <(helm completion zsh)
+source <(stern --completion=zsh)
 
 eval "$(starship init zsh)"
 source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# TF CUstom.tf
+# TF Custom.tf
 export TF_CLI_ARGS_plan="-var-file custom.tfvars"   
 export TF_CLI_ARGS_destroy="-var-file custom.tfvars"
 export TF_CLI_ARGS_apply="-var-file custom.tfvars"
 
 autoload -U +X bashcompinit && bashcompinit
 
+# Set History
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=1000
+export SAVEHIST=$HISTSIZE
+
 # gCloud SDK
-export PATH="/home/kgatzweiler/google-cloud-sdk/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH"
+export PATH="/home/kgatzweiler/bin:/home/kgatzweiler/google-cloud-sdk/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH"
 source /home/kgatzweiler/google-cloud-sdk/completion.zsh.inc
 
 # Terraform
@@ -49,7 +55,7 @@ function cslogs
 function docker-labels
 {
     local image=$1
-    docker inspect $1 | jq '.[0].Config.Labels[]'
+    docker inspect $1 | jq '.[0].Config.Labels'
 }
 
 function klogs

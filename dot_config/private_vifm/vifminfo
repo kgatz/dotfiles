@@ -1,0 +1,215 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/home/kgatzweiler/
+	..
+1653319107
+'b
+	/home/kgatzweiler/bin/
+	..
+1653319107
+'g
+	/home/kgatzweiler/git
+	terraform
+1653379791
+'h
+	/home/kgatzweiler/
+	..
+1653319107
+'t
+	/home/kgatzweiler/git/terraform
+	..
+1653379500
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/kgatzweiler/git/auto-deploy
+	..
+0
+d/home/kgatzweiler/git
+	..
+0
+d/home/kgatzweiler
+	Pictures
+5
+d/home/kgatzweiler/Pictures
+	..
+0
+d/home/kgatzweiler
+	Public
+6
+d/home/kgatzweiler/Public
+	..
+0
+d/home/kgatzweiler
+	git
+10
+d/home/kgatzweiler/git
+	work
+10
+d/home/kgatzweiler/git/work
+	..
+0
+d/home/kgatzweiler/git
+	work
+10
+d/home/kgatzweiler/git/work
+	..
+0
+d/home/kgatzweiler/git
+	terraform
+9
+d/home/kgatzweiler/git/terraform
+	tf-local
+6
+d/home/kgatzweiler/git/terraform/tf-local
+	outputs.tf
+15
+d/home/kgatzweiler/git/terraform
+	tf-local
+6
+d/home/kgatzweiler
+	git
+10
+d/home/kgatzweiler/git/terraform
+	..
+0
+d/home/kgatzweiler/git
+	cloud_collateral
+3
+d/home/kgatzweiler/git/cloud_collateral
+	init_template
+3
+d/home/kgatzweiler/git/cloud_collateral/init_template
+	..
+0
+d/home/kgatzweiler/git/cloud_collateral
+	otcs
+4
+d/home/kgatzweiler/git/cloud_collateral/otcs
+	container_files
+1
+d/home/kgatzweiler/git/cloud_collateral/otcs/container_files
+	json
+4
+d/home/kgatzweiler/git/cloud_collateral/otcs/container_files/json
+	..
+0
+d/home/kgatzweiler/git/cloud_collateral/otcs/container_files
+	python
+5
+d/home/kgatzweiler/git/cloud_collateral/otcs/container_files/python
+	contentserver.py
+1
+d
+
+# Right window history (oldest to newest):
+D/home/kgatzweiler/git/auto-deploy
+	..
+0
+D/home/kgatzweiler/git
+	..
+0
+D/home/kgatzweiler
+	git
+10
+D/home/kgatzweiler/git
+	..
+0
+D/home/kgatzweiler
+	..
+0
+D/home
+	..
+0
+D/
+	mnt
+12
+D/mnt
+	searchnas
+1
+D/mnt/searchnas
+	BASH-2778
+2
+D/mnt/searchnas/BASH-2778
+	..
+0
+D/mnt/searchnas
+	..
+0
+D/mnt
+	..
+0
+D/
+	mnt
+12
+D/home/kgatzweiler
+	git
+10
+D/home/kgatzweiler/git
+	terraform
+9
+D/home/kgatzweiler/git/terraform
+	tf-python
+10
+D/home/kgatzweiler/git/terraform/tf-python
+	..
+0
+D/home/kgatzweiler/git
+	terraform
+9
+D
+
+# Command line history (oldest to newest):
+:go
+:open
+:color-theme
+:color dracular
+:colorscheme
+:marks
+:q
+
+# Search history (oldest to newest):
+/open
+/kube
+/mnt
+/git
+/work
+/terra
+/tf
+/python
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/home/kgatzweiler/.vifm-Trash-1000/000_kubeconfig
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/kgatzweiler/.vifm-Trash-1000/000_kubeconfig
+	/home/kgatzweiler/git/kubeconfig
+
+# State:
+f
+i1
+[.1
+[F
+F
+I1
+].1
+]F
+s0

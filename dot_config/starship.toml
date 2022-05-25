@@ -30,3 +30,6 @@ style = "blue bold"
 [gcloud]
 disabled = true
 format = 'on [$symbol$account(\($project\))]($style)'
+
+[aws]
+disabled = true

@@ -8,3 +8,51 @@ Host gitlab.otxlab.net
     User git                       
     Port 22                        
     IdentityFile ~/.ssh/keys/gitlab
+
+Host g4tz.de
+    HostName cloud.g4tz.de
+    User rancher
+    Port 2222
+    IdentityFile ~/Nextcloud/Sync/ssh/root/id_rsa
+
+Host pve1
+    HostName pve1.g4tz.de
+    User root
+    Port 22
+    IdentityFile ~/Nextcloud/Sync/ssh/root/id_rsa
+
+Host pve2
+    HostName pve2.g4tz.de
+    User root
+    Port 22
+    IdentityFile ~/Nextcloud/Sync/ssh/root/id_rsa
+
+Host docker
+    HostName 192.168.248.20
+    User root
+    Port 22
+    IdentityFile ~/Nextcloud/Sync/ssh/root/id_rsa
+
+Host scannerhost
+    HostName 192.168.248.39
+    User root
+    Port 22
+    IdentityFile ~/Nextcloud/Sync/ssh/root/id_rsa
+
+Host wireguard
+    HostName 192.168.248.38
+    User root
+    Port 22
+    IdentityFile ~/Nextcloud/Sync/ssh/root/id_rsa
+  
+Host kgatz-wl
+    HostName 10.5.106.77
+    User kgatzweiler
+    Port 22
+    IdentityFile ~/.ssh/keys/id_ed25519
+
+Host kgatz
+    HostName 10.145.88.142
+    User kgatzweiler
+    Port 22
+    IdentityFile ~/.ssh/keys/id_ed25519

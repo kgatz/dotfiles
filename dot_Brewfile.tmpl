@@ -8,15 +8,18 @@ brew "tmux"
 brew "gcc"
 brew "fzf"
 brew "starship"
+brew "stern"
 brew "wget"
 brew "yq"
 brew "jq"
+brew "bat"
 
 brew "openshift-cli"
 brew "awscli"
 
 brew "kubernetes-cli"
 brew "kustomize"
+brew "kubeseal"
 brew "flux"
 brew "velero"
 brew "helm"
@@ -30,11 +33,17 @@ brew "kubie"
 brew "mkcert"
 brew "az"
 brew "stern"
+brew "nerdctl"
+brew "istioctl"
+brew "datree"
+brew "btop"
+
 
 {{- if eq .chezmoi.os "darwin" }}
 cask "docker"
 cask "1password-cli"
 cask "google-cloud-sdk"
+
 {{ else if eq .chezmoi.os "darwin" }}
 
 brew "azure-cli"
